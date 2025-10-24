@@ -9,7 +9,7 @@ producer = KafkaProducer(
     value_serializer=lambda v: json.dumps(v).encode('utf-8')
 )
 
-print("🚀 Enviando datos a Kafka topic: clima_medellin")
+print(" Enviando datos a Kafka topic: clima_medellin")
 
 for _, row in df.iterrows():
     mensaje = {
@@ -19,5 +19,5 @@ for _, row in df.iterrows():
         "temp": float(row["temp"])
     }
     producer.send("clima_medellin", value=mensaje)
-    print(f"✅ Enviado: {mensaje}")
+    print(f"  Enviado: {mensaje}")
     time.sleep(1)

@@ -25,3 +25,4 @@ print("  Estadísticas generales de temperatura:")
 stats.show()
 stats.write.mode("overwrite").csv("resultados_temperatura_batch/")
 print("  Resultados guardados en carpeta: resultados_temperatura_batch/")
+
